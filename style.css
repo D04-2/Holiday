@@ -31,7 +31,7 @@ img {
 
 header {
     display: grid;
-    grid-template-columns: 10% 1fr 200px;
+    grid-template-columns: 10% 1fr 300px;
     grid-template-rows: 1fr;
     background-color: var(--header-footer);
 }
@@ -41,19 +41,49 @@ header img {
 }
 
 nav ul {
-    height: 80%;
-    font-size: 1.2rem;
+    height: 100%;
+    font-size: 2rem;
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+nav ul li a{
+    text-decoration: none;
+    color: var(--logo);
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+form input[type=search] {
+    align-self: center;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    background-color: var(--logo);
+    font-size: 2rem;
+    border-radius: 30px;
+    color: white;
+    margin-right: 2rem;
+}
+
+input[type=search]::placeholder {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
 main {
     display: grid;
-    /* gap: 2rem; */
+    gap: 2rem;
     grid-template-columns: 10% 1fr 400px;
-    grid-template-rows: 300px repeat(3, 220px) 430px;
+    grid-template-rows: 300px repeat(3, 260px) 450px;
     grid-template-areas: 
     'hero hero hero'
     'sec1 sec1 rad'
@@ -66,7 +96,7 @@ main {
     grid-area: hero;
     background: url(images/hero.jpg);
     background-repeat: no-repeat;
-    background-position: 10% 30%;
+    background-position: 10% 10%;
     background-size: cover;
     margin: 2rem 0;
 }
@@ -86,15 +116,17 @@ main {
 }
 
 .reise-section h3 {
-    flex-basis: 30%;
+    flex-basis: 20%;
     align-self: center;
+    font-size: 3rem;
+    color: var(--logo);
 }
 
 .reise-section a {
     color: #fff;
-    flex-basis: 20%;
+    flex-basis: 15%;
     text-decoration: none;
-    background-color: var(--slogan);
+    background-color: var(--logo);
     align-self: flex-end;
     text-align: center;
     padding: 0.5rem 0;
@@ -103,9 +135,8 @@ main {
 }
 
 .reise-section img {
-    flex-basis: 50%;
-    width: 50%;
-    height: 150px;
+    flex-basis: 30%;
+    height: 180px;
     object-fit: cover;
     border: 2px solid var(--hightlight);
     box-shadow: 0 5px 10px var(--logo);
@@ -131,6 +162,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    color: var(--logo);
 }
 
 .rad > * {
@@ -140,11 +172,11 @@ main {
 
 .rad button {
     border: none;
-    background-color: var(--slogan);
+    background-color: var(--logo);
     padding: 0.5rem 0;
     border-radius: 50%;
-    height: 11rem;
-    width: 11rem;
+    height: 8rem;
+    width: 8rem;
     color: #fff;
     font-size: 1.6rem;
     display: block;
@@ -153,7 +185,7 @@ main {
 
 .user-section {
     grid-area: user;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
     background-color: rgba(12, 71, 103, 0.7);
     color: #fff;
 }
@@ -164,16 +196,70 @@ main {
     border-radius: 50%;
 }
 .user-section h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 
-.user-section p {
+.user-section p, h4 {
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.more-user {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--slogan);
+    padding: 1rem;
+    margin-right: 4rem;
+    border-radius: 10px;
 }
 
 .user-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+footer {
+    background-color: var(--header-footer);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+.footer-left{
+    display: flex;
+    flex-basis: 30%;
+    justify-content: space-evenly;
+    color: var(--logo);
+    font-weight: bold;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 30%;
+    font-size: 3rem;
+}
+
+.footer-right a{
+    margin-right: 5.5rem;
+    color: var(--logo);
+}
+
+.footer-left a {
+    color: var(--logo);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-left a:visited {
+    color: var(--logo);
+}
+
+.footer-left a:hover {
+    color: var(--logo);
 }
