@@ -97,6 +97,8 @@ main {
 .hero-section {
   grid-area: hero;
   background: url(images/hero.jpg);
+  background-color: rgb(195, 195, 245);
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: 10% 10%;
   background-size: cover;
