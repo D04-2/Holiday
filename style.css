@@ -16,12 +16,12 @@
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Poppins', sans-serif;
-    display: grid;
-    grid-template-rows: 11vh 1fr 5vh;
-    padding: 0 4rem;
-    gap: 2rem;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  grid-template-rows: 11vh 1fr 5vh;
+  padding: 0 4rem;
+  gap: 2rem;
 }
 
 img {
@@ -37,8 +37,9 @@ header {
 header img {
   width: 70%;
 }
-header nav, header form {
-    background-color: var(--header-footer);
+header nav,
+header form {
+  background-color: var(--header-footer);
 }
 
 nav ul {
@@ -136,7 +137,6 @@ main {
   border-radius: 10px;
 }
 
-
 .reise-section img {
   flex-basis: 30%;
   height: 180px;
@@ -194,11 +194,11 @@ main {
 }
 
 .user-section img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px solid var(--hightlight);
-    box-shadow: 0 5px 10px var(--logo);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid var(--hightlight);
+  box-shadow: 0 5px 10px var(--logo);
 }
 .user-section h3 {
   font-size: 3rem;
@@ -220,12 +220,13 @@ h4 {
   padding: 1rem;
   margin-right: 4rem;
   border-radius: 10px;
+  align-self: flex-end;
 }
 
 .user-container {
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-end;
+  height: 250px;
 }
 
 footer {
@@ -280,7 +281,6 @@ footer {
   margin: 10rem 28rem;
   color: var(--logo);
 }
-
 
 /*Formular*/
 
@@ -351,87 +351,123 @@ input[type="submit"]::placeholder {
 /* Special Trips */
 
 .card-container {
-    margin-top: 2em;
+  margin-top: 2em;
 }
 .card-wrapper {
-    display: grid;
-    gap: 4rem;
-    justify-content:space-evenly;
-    grid-template-columns: 300px 100px 300px 50px 100px 100px 500px;
-    grid-template-rows: 520px 100px 300px 50px 100px;
-    grid-template-areas: 
-    'card1 card1 card2 card3 card3 card3 card4'
-    'card1 card1 card2 . . . card4'
-    'card5 card6 card6 card7 card7 card 7 card8'
-    'card5 card6 card6 card7 card7 card7 card8'
-    '. . . . . . .';
-    
+  display: grid;
+  gap: 4rem;
+  justify-content: space-evenly;
+  grid-template-columns: 300px 100px 300px 50px 100px 100px 500px;
+  grid-template-rows: 520px 100px 300px 50px 100px;
+  grid-template-areas:
+    "card1 card1 card2 card3 card3 card3 card4"
+    "card1 card1 card2 . . . card4"
+    "card5 card6 card6 card7 card7 card 7 card8"
+    "card5 card6 card6 card7 card7 card7 card8"
+    ". . . . . . .";
 }
 .card {
-    text-align: center;
-    /* border: 5px solid var(--hightlight);*/
-    border-radius: 10px; 
-    box-shadow: 5px 5px 15px var(--logo);
+  text-align: center;
+  /* border: 5px solid var(--hightlight);*/
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px var(--logo);
 }
 
 .card a {
-    text-decoration: none;
-    color: #fff;
-    background-color: var(--logo);
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    display: inline-block;
-    margin-top: 2rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--logo);
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 2rem;
 }
 
 .card p {
-    width: 75%;
-    margin: auto;
+  width: 75%;
+  margin: auto;
 }
 
 .card img {
-    width: 100%;
-    height: 65%;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-1 {
-    /* grid-area: card1; */
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-}                                                   
+  /* grid-area: card1; */
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
 
 .card-2 {
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
-}     
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
 
 .card-3 {
-    grid-column: 4 / 7;
-    grid-row: 1 / 3;
-}     
+  grid-column: 4 / 7;
+  grid-row: 1 / 3;
+}
 
 .card-4 {
-    grid-column: 7 / 8;
-    grid-row: 1 / 3;
-}     
+  grid-column: 7 / 8;
+  grid-row: 1 / 3;
+}
 .card-5 {
-    grid-column: 3 / 6;
-    grid-row: 3 / 6;
-}     
+  grid-column: 3 / 6;
+  grid-row: 3 / 6;
+}
 .card-6 {
-    grid-column: 1 / 3;
-    grid-row: 3 / 6;
-}     
+  grid-column: 1 / 3;
+  grid-row: 3 / 6;
+}
 .card-7 {
-    grid-column: 6 / 8;
-    grid-row: 3 / 6;
-}     
+  grid-column: 6 / 8;
+  grid-row: 3 / 6;
+}
 .card-8 {
-    grid-column: 4 / 8;
-    grid-row: 5 / 6;
-}     
+  grid-column: 4 / 8;
+  grid-row: 5 / 6;
+}
 
 /* Special trips ende */
+
+/* User section flip*/
+
+.user-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+.front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  perspective: 1000px;
+  backface-visibility: hidden;
+  transition: 4s;
+}
+.back {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: 4s;
+}
+
+.user-image:hover .front {
+  transform: rotateY(180deg);
+}
+.user-image:hover .back {
+  transform: rotateY(360deg);
+
+}
