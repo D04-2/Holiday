@@ -42,13 +42,64 @@ header form {
   background-color: var(--header-footer);
 }
 
-nav ul {
+ul {
+  list-style: none;
+}
+
+.menu {
   height: 100%;
   font-size: 2rem;
-  list-style: none;
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  position: relative;
+}
+.link-items {
+  position: relative;
+}
+.link-items::before {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  content: '';
+  width: 0%;
+  height: 0.1rem;
+  background-color: black;
+  transition: 1s;
+}
+
+.link-items:hover::before{
+  width: 100%;
+}
+
+
+
+.submenu {
+  position: absolute;
+  width: max-content;
+  margin-top: 1rem;
+  opacity: 0;
+  background-color: var(--background);
+  transition: opacity 0.5s ease-in;
+}
+
+.submenu li{
+  padding: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu li:hover .submenu {
+  opacity: 1;
+}
+
+.submenu li:hover {
+  background-color: var(--logo);
+}
+
+.submenu li:hover a {
+  color: #fff;
 }
 
 nav ul li a {
@@ -186,6 +237,16 @@ main {
   font-size: 1.6rem;
   display: block;
   margin: 0 auto;
+}
+
+.rad img {
+  animation: rotation 8s linear infinite forwards;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .user-section {
@@ -455,12 +516,13 @@ input[type="submit"]::placeholder {
 }
 .back {
   position: absolute;
-  top: 80px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  text-align: center;
+  line-height: 200px;
   border-radius: 50%;
+  background: #e1cbb7;
   backface-visibility: hidden;
   transform: rotateY(180deg);
   transition: 4s;
@@ -471,5 +533,4 @@ input[type="submit"]::placeholder {
 }
 .user-image:hover .back {
   transform: rotateY(360deg);
-
 }
